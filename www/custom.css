@@ -1,0 +1,10 @@
+.box.box-warning{
+  background: #ECF0F5;
+  border-color: #ECF0F5;
+  box-shadow: 0 0px 0px rgba(0, 0, 0,.1);
+}
+
+.box.box-warning>.box-header {
+  color: #ECF0F5;
+  background: #ECF0F5;
+}
