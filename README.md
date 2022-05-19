@@ -43,7 +43,7 @@ This recommender is using a very simple algorithm. We identified 40 rides / attr
 as outcomes and *r1* and *r2* as predictors in the following form:
 
 <center>
-![Figure](https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;y_j=\alpha_j+\beta_{1j}r_1+\beta_{2j}r_2+\beta_{3j}r_1\times{r_2}+\varepsilon)
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;y_j=\alpha_j+\beta_{1j}r_1+\beta_{2j}r_2+\beta_{3j}r_1\times{r_2}+\varepsilon)"></img>
 </center>
 
 * We then plug in the user's ratings to get 38 predicted ratings for each of the 38 remaining rides:
@@ -51,7 +51,9 @@ as outcomes and *r1* and *r2* as predictors in the following form:
 ![Figure](https://latex.codecogs.com/svg.image?(\hat{y}_j\textrm{&space;for&space;}j=1,\dots,38))
 
 <center>
-![Figure](https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\hat{y}_j = \hat\alpha_j+\hat\beta_{1j}rate_1+\hat\beta_{2j}rate_2+\hat\beta_{3j}rate_1\times{rate_2})
+
+<img src="https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\hat{y}_j = \hat\alpha_j+\hat\beta_{1j}rate_1+\hat\beta_{2j}rate_2+\hat\beta_{3j}rate_1\times{rate_2})"></img>
+
 </center>
 
 * Finally, we arrange the 38 predicted ratings and output the ride with the highest predicted rating. 
