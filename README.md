@@ -34,7 +34,7 @@ This recommender is using a very simple algorithm. We identified 40 rides / attr
 * We subset the data to only include surveys for $age_i$
 * We fit 38 prediction models using the ratings from the remaining 38 rides $(ride_j \in 1-5$ for $j = 1, \dots, 38)$ as outcomes and $r_1$ and $r_2$ as predictors in the following form:
 
-<img src="https://render.githubusercontent.com/render/math?math={y}_j = \alpha_j + \beta_{1j}r_1 + \beta_{2j}r_2 + \beta_{3j}r_1\times r_2 + \varepsilon">
+![Figure](https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\alpha_j + \beta_{1j}r_1 + \beta_{2j}r_2 + \beta_{3j}r_1\times r_2 + \varepsilon)
 
 * We then plug in the user's ratings to get 38 predicted ratings for each of the 38 remaining rides $(\hat{y}_j$ for $j=1,\dots,38)$
 
