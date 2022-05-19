@@ -30,16 +30,29 @@ To run the application locally, first download the files in this repository. If 
 
 This recommender is using a very simple algorithm. We identified 40 rides / attractions at Magic Kingdom. 
 
-* We have 6 age groups. The user inputs their age $(age_i$ for $i = 1, \dots, 6)$ and the previous two rides they rode $(r_1, r_2)$, along with ratings $(rate_1, rate_2)$ from 1-5. 
-* We subset the data to only include surveys for $age_i$
-* We fit 38 prediction models using the ratings from the remaining 38 rides $(ride_j \in 1-5$ for $j = 1, \dots, 38)$ as outcomes and $r_1$ and $r_2$ as predictors in the following form:
+* We have 6 age groups. The user inputs their age:
 
+![Figure](https://latex.codecogs.com/svg.image?(age_i\textrm{&space;for&space;}i=1,\dots,6))
 
-![Figure](https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\alpha_j+\beta_{1j}r_1+\beta_{2j}r_2+\beta_{3j}r_1\times{r_2}+\varepsilon)
+* The user inputs the previous two rides they rode (*r1*, *r2*), along with ratings (*rate1, rate2*) from 1-5. 
+* We subset the data to only include surveys for *age<sub>i</sub>*
+* We fit 38 prediction models using the ratings from the remaining 38 rides:
 
-* We then plug in the user's ratings to get 38 predicted ratings for each of the 38 remaining rides $(\hat{y}_j$ for $j=1,\dots,38)$
+![Figure](https://latex.codecogs.com/svg.image?(ride_j\in1-5\textrm{&space;for&space;}j=1,\dots,38))
 
-$$\hat{y}_j = \hat\alpha_j + \hat\beta_{1j}rate_1 + \hat\beta_{2j}rate_2 + \hat\beta_{3j}rate_1\times rate_2$$
+as outcomes and *r1* and *r2* as predictors in the following form:
+
+<center>
+![Figure](https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;y_j=\alpha_j+\beta_{1j}r_1+\beta_{2j}r_2+\beta_{3j}r_1\times{r_2}+\varepsilon)
+</center>
+
+* We then plug in the user's ratings to get 38 predicted ratings for each of the 38 remaining rides:
+
+![Figure](https://latex.codecogs.com/svg.image?(\hat{y}_j\textrm{&space;for&space;}j=1,\dots,38))
+
+<center>
+![Figure](https://latex.codecogs.com/png.image?\dpi{110}&space;\bg_white&space;\hat{y}_j = \hat\alpha_j+\hat\beta_{1j}rate_1+\hat\beta_{2j}rate_2+\hat\beta_{3j}rate_1\times{rate_2})
+</center>
 
 * Finally, we arrange the 38 predicted ratings and output the ride with the highest predicted rating. 
 
