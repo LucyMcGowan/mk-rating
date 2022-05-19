@@ -1,7 +1,7 @@
 # Disney Ride Picker
 Lucy D'Agostino McGowan
 
-This application using [Touringplans](https://touringplans.com) survey data to estimate the Magic Kingdom ride you'd rate the highest based on the ratings of the last two rides you rode. 
+This application uses [Touringplans](https://touringplans.com) survey data to estimate the Magic Kingdom ride you'd rate the highest based on the ratings of the last two rides you rode. 
 You can find the application at: http://lucy.shinyapps.io/mk-rating/
 
 ## To run the appliation
