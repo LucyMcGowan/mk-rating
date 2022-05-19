@@ -54,7 +54,8 @@ mk_rides <- mk_rides[order(mk_rides)]
 
 ## Read in and clean data ----
 
-d <- read_csv("ride_ratings.csv")
+d <- read_csv("mk_ratings.csv")
+
 dat <- d %>%
   select(-created_at) %>%
   filter(name %in% mk_rides) %>%
